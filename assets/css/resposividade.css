@@ -231,6 +231,7 @@
         backdrop-filter: blur(10px); /* Aplica o desfoque no fundo */
         -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com navegadores baseados em WebKit */
         border: 1px solid rgba(255, 255, 255, 0.2); /* Bordas para dar efeito de vidro */
+        z-index: 9999;
 
     }
 
