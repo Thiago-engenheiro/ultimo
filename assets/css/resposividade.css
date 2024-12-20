@@ -148,11 +148,11 @@
       
     }
 
+
     .tituloDaPagina {
 
-        background: #1e1e1e;
+     
         padding: 40px;
-        border-radius: 16px;
         width: 85vw;
         text-align: center;
        
@@ -170,7 +170,8 @@
     .loader {
 
        
-        margin: 0% 35%;
+        margin: 5% 32%;
+        width: 300px;
 
     }
 
