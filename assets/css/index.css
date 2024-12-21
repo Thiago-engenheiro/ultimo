@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--fonte01);
   box-sizing: border-box;
+  mix-blend-mode: difference;
   
 }
 
@@ -143,3 +144,6 @@ body {
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
