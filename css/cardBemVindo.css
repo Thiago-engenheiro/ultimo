@@ -1,12 +1,14 @@
 .continerCard {
 
-    background: #1e1e1e;
-    padding: 40px;
-    border-radius: 16px;
-    width: 600px;
-    margin: 2.5vh 0px 0px 0px;
-    height: 85vh;
-    filter: drop-shadow(0 0 2px white);
+  background: #1e1e1e;
+  padding: 40px;
+  border-radius: 16px;
+  width: 600px;
+  margin: 2.5vh 0px 0px 0px;
+  height: 85vh;
+  filter: drop-shadow(0 0 2px white);
+  mix-blend-mode: difference;
+
 }
 
 .conteudoCard {

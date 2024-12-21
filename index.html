@@ -82,37 +82,37 @@
 
                         <li class="continerTextoLinkApresentacao">
 
-                            <a class="textoLinkApresentacao" href="/">Bem vindo</a>
+                            <a class="textoLinkApresentacao" href="#" data-target="Bem-vindo">Bem vindo</a>
 
                         </li>
 
                         <li class="continerTextoLinkApresentacao">
                                 
-                            <a class="textoLinkApresentacao" href="/">Sobre mim</a>
+                            <a class="textoLinkApresentacao" href="#" data-target="Sobre-mim"> Sobre mim</a>
 
                         </li>
 
                         <li class="continerTextoLinkApresentacao">
                                 
-                            <a class="textoLinkApresentacao" href="/">Formação // carreira</a>
+                            <a class="textoLinkApresentacao" href="#" data-target="Formação//carreira"> Formação // carreira</a>
 
                         </li>
 
                         <li class="continerTextoLinkApresentacao">
                                 
-                            <a class="textoLinkApresentacao" href="/">Projetos</a>
+                            <a class="textoLinkApresentacao" href="#" data-target="Projetos"> Projetos</a>
 
                         </li>
 
                         <li class="continerTextoLinkApresentacao">
                                 
-                            <a class="textoLinkApresentacao" href="/">Certificados</a>
+                            <a class="textoLinkApresentacao" href="#" data-target="Certificados"> Certificados</a>
 
                         </li>
 
                         <li class="continerTextoLinkApresentacao">
                                 
-                            <a class="textoLinkApresentacao" href="/">Blog</a>
+                            <a class="textoLinkApresentacao" href="#" data-target="Blog"> Blog</a>
 
                         </li>
                             
@@ -198,11 +198,13 @@
 
             </div>
 
+           
+
             <section>
 
                 <section class="continerCard">
 
-                    <div class="conteudoCard">
+                    <div class="conteudoCard " id="Bem-vindo">
 
                         <h4 class="CardTitulo">
 
@@ -423,13 +425,22 @@
 
                             </div>
 
-
                         </section>
 
                     </div>
 
-                </section>
+                    <div class="conteudoCard hidden" id="Sobre-mim">Sobre mim</div>
 
+                    <div class="conteudoCard hidden" id="Formação//carreira">Formação</div>
+
+                    <div class="conteudoCard hidden" id="Projetos">Projetos</div>
+
+                    <div class="conteudoCard hidden" id="Certificados">Certificados</div>
+
+                    <div class="conteudoCard hidden" id="Blog">Blog</div>
+
+                </section>
+                
             </section>
 
             <section class="SecaoContato02">
@@ -513,34 +524,61 @@
     </main>
 
 </body>
-<script src="./js/main02.js"></script>
-<script src="./Js/main.js"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script>
-          const swiper = new Swiper('.swiper', {
-        spaceBetween: 10,
-        slidesPerView: 5,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-        },
-        loop: true,
-    });
+    <script src="./js/main02.js"></script>
+    <script src="./Js/main.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-// Função para mudar o slide automaticamente
-let autoplayInterval = setInterval(() => {
-    swiper.slideNext();
-}, 2000); // Tempo entre os slides
+    <script>
+            const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 5,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            loop: true,
+        });
 
-// Pausar autoplay durante interação (opcional)
-swiper.el.addEventListener('mouseenter', () => clearInterval(autoplayInterval)); // Pausa ao passar o mouse
-swiper.el.addEventListener('mouseleave', () => {
-    autoplayInterval = setInterval(() => {
+    // Função para mudar o slide automaticamente
+    let autoplayInterval = setInterval(() => {
         swiper.slideNext();
-    }, 3000);
-}); // Retoma quando o mouse sai
-        </script>
-    </body>
+    }, 2000); // Tempo entre os slides
+
+    // Pausar autoplay durante interação (opcional)
+    swiper.el.addEventListener('mouseenter', () => clearInterval(autoplayInterval)); // Pausa ao passar o mouse
+    swiper.el.addEventListener('mouseleave', () => {
+        autoplayInterval = setInterval(() => {
+            swiper.slideNext();
+        }, 3000);
+    }); // Retoma quando o mouse sai
+
+    </script>
+
+    <script>
+
+        // Seleciona todos os links e os cards
+        const links = document.querySelectorAll('.textoLinkApresentacao');
+        const cards = document.querySelectorAll('.conteudoCard');
+        
+
+        // Adiciona evento de clique para cada link
+        links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            const targetId = link.getAttribute('data-target'); // Obtém o ID do card alvo
+
+            // Esconde todos os cards
+            cards.forEach(card => card.classList.add('hidden'));
+
+            // Mostra o card correspondente
+            const targetCard = document.getElementById(targetId);
+            targetCard.classList.remove('hidden');
+        });
+        });
+    </script>
+
+
+</body>
 
 </html>
 

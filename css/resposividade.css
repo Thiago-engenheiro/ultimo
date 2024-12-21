@@ -143,16 +143,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
        
-      
-      
     }
 
     .tituloDaPagina {
 
-        background: #1e1e1e;
+     
         padding: 40px;
-        border-radius: 16px;
         width: 85vw;
         text-align: center;
        
@@ -167,10 +165,18 @@
 
     }
 
+    .textos{
+
+        margin: 50px 0px 0px 0px;
+
+
+    }
+
     .loader {
 
        
-        margin: 0% 35%;
+        margin: 5% 32%;
+        width: 300px;
 
     }
 
@@ -205,10 +211,22 @@
         font-size: 3vw;
          
       }
+
+      .card {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+      }
   
       .loader {
     
         font-size: 3vw;
+        margin: 10px 0px;
+        padding: 0px;
+        width: auto;
           
       }
 
@@ -231,6 +249,7 @@
         backdrop-filter: blur(10px); /* Aplica o desfoque no fundo */
         -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com navegadores baseados em WebKit */
         border: 1px solid rgba(255, 255, 255, 0.2); /* Bordas para dar efeito de vidro */
+        z-index: 9999;
 
     }
 
@@ -251,6 +270,7 @@
 
         width: 85vw;
         height: 100%;
+        margin: 9.5vh 0px 0px 0px;
 
     }
 
@@ -338,6 +358,44 @@
         width: 75vw;
       
     }
+
+    .button {
+    
+        font-size:14vw;
+        margin: 0px 0px 40px 0px;
+       
+      }
+  
+      .Subtitulo {
+  
+        font-size: 4vw;
+        
+      }
+  
+      .Subtitulo01 {
+  
+        font-size: 4vw;
+          
+      }
+  
+      .Subtitulo02 {
+  
+        font-size: 4vw;
+         
+      
+      }
+  
+      .textoAnimado {
+  
+        font-size: 4vw;
+         
+      }
+
+      .loader {
+    
+        font-size: 4vw;
+     
+      }
    
 
 }
